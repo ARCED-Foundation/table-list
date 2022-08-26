@@ -4,7 +4,7 @@
 
 ## Description
 
-This field plug-in allows for choice lists to be presented in the form of a table. The table can be created from correctly formatted static or [pre-loaded choices](https://docs.surveycto.com/02-designing-forms/04-sample-forms/12.search-and-select.html). The table further allows for sorting for each column and also searching for across the table.   See the [Parameters section](#parameters) below.
+This field plug-in allows for choice lists to be presented in the form of a table. The table can be created from correctly formatted static or [pre-loaded choices](https://docs.surveycto.com/02-designing-forms/04-sample-forms/12.search-and-select.html). The table further allows for sorting for each column and also searching for across the table. [ARCED](www.arced.foundation) team added a new parameter that allows pagination in the table.  See the [Parameters section](#parameters) below.
 
 [![Download now](extras/download-button.png)](https://github.com/surveycto/table-list/raw/master/table-list.fieldplugin.zip)
 
@@ -32,6 +32,7 @@ Using multiple pre-load data columns as labels with the search() function is als
 | --- | --- |
 | `delimiter` | Used to set the delimiter used in the choice label column (or column of pre-loaded data that contains the table). |
 | `headers` | A comma separated list of table headers. The number of these should match the expected number of columns in the choice label column (or column of csv or dataset) |
+| `page` | 'True' or 'False'. 'True' creates paginated table. |
 
 > **Example:**  
 > If you have an appearance of `custom-table-list(delimiter='|', headers = 'ID, Description, Colour')`
