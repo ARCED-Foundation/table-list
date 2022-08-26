@@ -5,6 +5,7 @@ var numberOfChoices = choices.length // Count the number of choices for this fie
 var fieldType = fieldProperties.FIELDTYPE // Get the type of field (select_one or select_multiple)
 var delimiter = getPluginParameter('delimiter') // Get thd parameter for the delimiter entered in the form definition
 var headers = getPluginParameter('headers') // Get the list of headers entered in the form definition
+var page = getPluginParameter('page') // Get the list of headers entered in the form definition
 var headerArray = headers.split(',') // get individual headers from the headers parameter
 
 var style = 'single' // set the default style to select one
@@ -72,7 +73,7 @@ const table = $('#tableId').DataTable({
     }],
   order: [], // Remove the sorting icon from the first column. Also allows for default sorting to be used
   info: false, // Hide table information
-  paging: false, // Remove table paging
+  paging: page, // Remove table paging
   select: { // Allow section for this table
     items: 'row', // Allow selection by row
     style: style // Allow selection based on fieldType (single/multi)
